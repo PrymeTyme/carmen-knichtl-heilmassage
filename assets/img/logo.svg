@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" width="240" height="240" role="img" aria-label="Logo Carmen Knichtl Heilmasseurin">
+  <defs>
+    <!-- Bogenpfad für den Schriftzug -->
+    <path id="textArc" d="M 32,120 A 88,88 0 1,1 208,120" fill="none" />
+  </defs>
+
+  <!-- Gebogener Schriftzug -->
+  <text fill="currentColor" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="500" letter-spacing="5.5">
+    <textPath href="#textArc" startOffset="50%" text-anchor="middle">CARMEN KNICHTL</textPath>
+  </text>
+
+  <!-- Grüner Außenkreis -->
+  <circle cx="120" cy="132" r="72" fill="none" stroke="#a4d233" stroke-width="2.5" />
+
+  <!-- Grüne obere Figur (Behandlerin) -->
+  <circle cx="120" cy="95" r="10" fill="#a4d233" />
+  <path d="M 118,145 C 102,128 96,108 106,100 C 113,95 117,112 119,145 Z" fill="#a4d233" />
+  <path d="M 122,145 C 138,128 144,108 134,100 C 127,95 123,112 121,145 Z" fill="#a4d233" />
+
+  <!-- Blaue liegende Figur (Klient) -->
+  <circle cx="77" cy="161" r="10" fill="#29abe2" />
+  <path d="M 88,153 C 102,141 118,145 135,151 C 154,157 170,152 183,134 C 175,158 156,166 133,160 C 115,155 101,152 88,158 Z" fill="#29abe2" />
+  <path d="M 90,164 C 104,155 121,159 135,173 C 120,167 107,165 95,170 C 91,171 88,167 90,164 Z" fill="#29abe2" />
+</svg>
