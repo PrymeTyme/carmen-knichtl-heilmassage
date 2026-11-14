@@ -8,17 +8,16 @@
     </title>
     <meta
       name="description"
-      content="Wieder in Balance – Heilmassage in Altach (Vorarlberg). Klassische Massage, Lymphdrainage, Schröpf-, Faszien- &amp; Hot-Stone-Massage. Teil-Rückvergütung durch ÖGK &amp; Kassen."
+      content="Heilmassage in Altach (Vorarlberg) – Carmen Knichtl. Klassische Massage, Lymphdrainage, Schröpfen, Faszien-, Fußreflexzonen-, Gua Sha &amp; Hot-Stone-Massage. Teil-Rückvergütung durch ÖGK &amp; Kassen."
     />
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="icon" type="image/svg+xml" href="assets/img/logo.svg" />
+    <link rel="icon" type="image/png" href="assets/img/logo.png" />
   </head>
   <body>
     <!-- Navigation -->
     <header class="site-header">
       <div class="container header-inner">
-        <a href="#start" class="logo-link">
-          <!-- Falls Logo-Datei vorhanden, hier <img> einfügen -->
+        <a href="#start" class="logo-link" data-tab="start">
           <span class="logo-text">CARMEN KNICHTL</span>
         </a>
         <button
@@ -29,9 +28,9 @@
           ☰
         </button>
         <nav class="main-nav" id="main-nav">
-          <a href="#start">Startseite</a>
+          <a href="#start" class="active">Startseite</a>
           <a href="#ueber-mich">Über mich</a>
-          <a href="#behandlungen">Behandlungen</a>
+          <a href="#behandlungen">Therapie &amp; Massagen</a>
           <a href="#preise">Preise &amp; Gutscheine</a>
           <a href="#kontakt">Kontakt</a>
         </nav>
@@ -39,79 +38,181 @@
     </header>
 
     <main>
-      <!-- Hero -->
-      <section id="start" class="hero">
-        <div class="container hero-grid">
-          <div class="hero-content">
-            <p class="hero-kicker">
-              Wieder in Balance – mit gezielten Massagen zu mehr Wohlbefinden
-            </p>
-            <h1>Carmen Knichtl</h1>
-            <p class="hero-subtitle">
-              Gewerbliche &amp; Freiberufliche Heilmasseurin
-            </p>
-            <div class="hero-actions">
-              <a
-                href="mailto:carmen.massagen@gmx.at?subject=Terminanfrage"
-                class="btn btn-white"
-                >Termin per E-Mail anfragen</a
-              >
-              <a href="tel:+436801294965" class="btn btn-outline"
-                >+43 (0) 680 129 4965</a
-              >
-            </div>
-          </div>
-          <div class="hero-visual">
-            <!-- Platzhalter für Logo oder Praxisfoto -->
-            <div class="hero-visual">
+      <!-- 1. STARTSEITE -->
+      <div id="start" class="content-section is-active">
+        <section class="hero hero-centered">
+          <div class="container hero-container-centered">
+            <!-- Großes, zentriertes Logo -->
+            <div class="hero-logo-wrapper">
               <img
-                src="assets/img/logo.svg"
-                alt="Carmen Knichtl Logo"
-                width="240"
-                height="240"
-                style="color: #ffffff; margin: 0 auto; display: block"
+                src="assets/img/logo.png"
+                alt="Carmen Knichtl - Gewerbliche &amp; Freiberufliche Heilmasseurin"
+                class="hero-logo-img"
               />
             </div>
+
+            <p class="hero-kicker-centered">
+              Jede Massage gestalte ich fachlich fundiert, respektvoll und
+              nachvollziehbar – frei von starren Abläufen, ganz auf Sie und
+              Ihren Körper abgestimmt.
+            </p>
+
+            <div class="hero-actions">
+              <a href="#kontakt" class="btn btn-white" data-tab="kontakt"
+                >Termin vereinbaren</a
+              >
+              <a
+                href="#behandlungen"
+                class="btn btn-outline"
+                data-tab="behandlungen"
+                >Massagen entdecken</a
+              >
+            </div>
+          </div>
+        </section>
+
+        <!-- Kassen-Banner -->
+        <div class="container">
+          <div class="info-banner">
+            <span class="badge-check" aria-hidden="true">✓</span>
+            <p>
+              <strong>Teil-Rückvergütung durch ÖGK &amp; weitere Kassen</strong>
+              mit ärztlicher Verordnung möglich!
+            </p>
           </div>
         </div>
-      </section>
 
-      <!-- Kassen-Banner -->
-      <div class="container">
-        <div class="info-banner">
-          <span class="badge-check" aria-hidden="true">✓</span>
-          <p>
-            <strong>Teil-Rückvergütung durch ÖGK &amp; weitere Kassen</strong>
-            mit ärztlicher Verordnung möglich!
-          </p>
-        </div>
+        <!-- Startseiten-Inhalt (Einführung & Überblick) -->
+        <section class="section">
+          <div class="container">
+            <div class="section-header">
+              <h2>Herzlich willkommen in meiner Praxis in Altach</h2>
+              <p>
+                Ob gezielte Schmerztherapie nach ärztlicher Verordnung oder
+                wohltuende Auszeit vom Alltag: In ruhiger Atmosphäre nehme ich
+                mir Zeit für Ihr Anliegen.
+              </p>
+            </div>
+
+            <div class="cards-grid">
+              <article class="card">
+                <h3>Individuelle Behandlung</h3>
+                <p>
+                  Vor jeder Sitzung besprechen wir Ihre aktuellen Beschwerden
+                  und stimmen die Grifftechniken exakt auf Ihre Tagesform ab.
+                </p>
+              </article>
+
+              <article class="card">
+                <h3>Kassen &amp; Verordnung</h3>
+                <p>
+                  Mit einer ärztlichen Überweisung zur Heilmassage können Sie
+                  die Honorarnote bei der ÖGK, SVS oder BVAEB zur
+                  Teil-Rückvergütung einreichen.
+                </p>
+              </article>
+
+              <article class="card">
+                <h3>Vielfältige Techniken</h3>
+                <p>
+                  Von klassischer Massage und manueller Lymphdrainage bis hin zu
+                  Faszienarbeit, Schröpfen, Gua Sha und Hot-Stone-Massage.
+                </p>
+              </article>
+            </div>
+          </div>
+        </section>
       </div>
 
-      <!-- Über mich (Platzhalter) -->
-      <section id="ueber-mich" class="section">
+      <!-- 2. ÜBER MICH -->
+      <section id="ueber-mich" class="section content-section">
         <div class="container about-grid">
           <div class="about-image">
             <div class="image-placeholder">Porträtfoto folgt</div>
           </div>
           <div class="about-text">
             <h2>Über mich</h2>
-            <p>
-              Hier folgt in Kürze eine persönliche Vorstellung von Carmen
-              Knichtl, ihrem Werdegang und ihrer Arbeitsweise als gewerbliche
-              und freiberufliche Heilmasseurin in Altach.
+            <p class="lead-text">
+              <strong
+                >Carmen Knichtl – Heilmasseurin sowie medizinische und
+                gewerbliche Masseurin.</strong
+              >
             </p>
+            <p>
+              Meine fundierte Ausbildung habe ich in Salzburg, in Vorarlberg
+              sowie an der renommierten Schloss-Schule in der Steiermark
+              absolviert. Durch meine langjährige praktische Erfahrung mit
+              Patienten und Kunden bringe ich heute ein sicheres Gespür und viel
+              Ruhe in meine Behandlungen mit.
+            </p>
+            <p>
+              Ich arbeite gemeinsam mit Ihnen zielorientiert, um Ihre
+              Beschwerden nachhaltig zu lindern und Ihr Wohlbefinden zu
+              steigern.
+            </p>
+
+            <h3 class="about-list-title">
+              Meine Qualifikationen &amp; Werte auf einen Blick:
+            </h3>
+            <ul class="about-list">
+              <li>
+                <span class="check-icon" aria-hidden="true">✓</span>
+                <span
+                  ><strong>Ausbildung:</strong> Medizinische &amp; gewerbliche
+                  Masseurin (Salzburg)</span
+                >
+              </li>
+              <li>
+                <span class="check-icon" aria-hidden="true">✓</span>
+                <span
+                  ><strong>Spezialisierung:</strong> Diplomierte Heilmasseurin
+                  (Schloss-Schule, Steiermark)</span
+                >
+              </li>
+              <li>
+                <span class="check-icon" aria-hidden="true">✓</span>
+                <span
+                  ><strong>Erfahrung:</strong> Langjährige, sichere Arbeit mit
+                  Patientinnen und Patienten</span
+                >
+              </li>
+              <li>
+                <span class="check-icon" aria-hidden="true">✓</span>
+                <span
+                  ><strong>Qualität:</strong> Laufende Weiterbildungen für
+                  moderne, wirkungsvolle Behandlungen</span
+                >
+              </li>
+              <li>
+                <span class="check-icon" aria-hidden="true">✓</span>
+                <span
+                  ><strong>Haltung:</strong> Respektvoller, einfühlsamer und
+                  transparenter Umgang</span
+                >
+              </li>
+            </ul>
           </div>
         </div>
       </section>
 
-      <!-- Behandlungen -->
-      <section id="behandlungen" class="section section-alt">
+      <!-- 3. THERAPIE & MASSAGEN -->
+      <section id="behandlungen" class="section section-alt content-section">
         <div class="container">
           <div class="section-header">
             <h2>Behandlungen &amp; Massagestile</h2>
             <p>
               Individuell abgestimmte Therapien für Regeneration,
               Schmerzlinderung und Entspannung.
+            </p>
+            <p
+              style="
+                margin-top: 1rem;
+                color: var(--color-text);
+                font-weight: 500;
+              "
+            >
+              Gerne nehme ich mir Zeit für Ihre Fragen rund um die jeweiligen
+              Therapie- und Massagetechniken.
             </p>
           </div>
 
@@ -156,31 +257,65 @@
             <article class="card">
               <div class="card-icon" aria-hidden="true">
                 <svg viewBox="0 0 24 24">
-                  <path d="M6 17h12" />
-                  <path d="M7 17v-4a5 5 0 0 1 10 0v4" />
-                  <circle cx="12" cy="6" r="2" />
-                  <path d="M12 14v-2" />
+                  <path d="M4 7c4 0 4 4 8 4s4-4 8-4" />
+                  <path d="M4 17c4 0 4-4 8-4s4 4 8 4" />
+                  <path d="M7 7v10M17 7v10" />
                 </svg>
               </div>
-              <h3>Schröpfmassage</h3>
+              <h3>Faszien-Massage</h3>
               <p>
-                Nutzt Vakuumgläser, um die Durchblutung und den Lymphfluss zu
-                fördern, Muskelverspannungen zu lösen und Schmerzen zu lindern.
+                Löst Verklebungen im Bindegewebe, um Spannungen und Schmerzen
+                nachhaltig zu reduzieren und die Beweglichkeit zu verbessern.
               </p>
             </article>
 
             <article class="card">
               <div class="card-icon" aria-hidden="true">
                 <svg viewBox="0 0 24 24">
-                  <path d="M4 7c4 0 4 4 8 4s4-4 8-4" />
-                  <path d="M4 17c4 0 4-4 8-4s4 4 8 4" />
-                  <path d="M7 7v10M17 7v10" />
+                  <path
+                    d="M12 22A7 7 0 0 1 5 15c0-4 3-7 4-10a3 3 0 0 1 6 0c1 3 4 6 4 10a7 7 0 0 1-7 7z"
+                  />
+                  <path d="M9 7v.01M15 7v.01M12 11v.01" />
                 </svg>
               </div>
-              <h3>Faszienmassage</h3>
+              <h3>Fußreflexzonenmassage</h3>
               <p>
-                Löst Verklebungen im Bindegewebe, um Spannungen und Schmerzen
-                nachhaltig zu reduzieren.
+                Stimuliert gezielt Reflexpunkte am Fuß, um Organe und
+                Körperregionen positiv zu beeinflussen und die
+                Selbstheilungskräfte zu aktivieren.
+              </p>
+            </article>
+
+            <article class="card">
+              <div class="card-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M6 17h12" />
+                  <path d="M7 17v-4a5 5 0 0 1 10 0v4" />
+                  <circle cx="12" cy="6" r="2" />
+                  <path d="M12 14v-2" />
+                </svg>
+              </div>
+              <h3>Schröpfen</h3>
+              <p>
+                Nutzt Vakuumgläser, um die Durchblutung und den Lymphfluss zu
+                fördern, tief sitzende Muskelverspannungen zu lösen und
+                Schmerzen zu lindern.
+              </p>
+            </article>
+
+            <article class="card">
+              <div class="card-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M6 18s-2-3-1-6c1-4 4-6 7-6 4 0 7 2 7 5s-2 8-5 10c-3 2-6-1-8-3z"
+                  />
+                </svg>
+              </div>
+              <h3>Gua Sha</h3>
+              <p>
+                Eine bewährte Technik, bei der die Haut mit einem speziellen
+                Schaber sanft massiert wird, um den Stoffwechsel anzuregen und
+                Blockaden zu lösen.
               </p>
             </article>
 
@@ -197,20 +332,55 @@
               <h3>Hot-Stone-Massage</h3>
               <p>
                 Verwendet erhitzte Steine, deren Wärme tief in die Muskulatur
-                eindringt. Dies verbessert die Durchblutung, löst Verspannungen
-                und versetzt den Körper in einen Zustand tiefer Entspannung.
-                Wird mit der klassischen Massage kombiniert.
+                eindringt. Wird mit der klassischen Massage kombiniert für tiefe
+                Entspannung.
               </p>
+            </article>
+
+            <article class="card" style="border-color: var(--color-primary)">
+              <div class="card-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <circle cx="8" cy="7" r="3" />
+                  <path d="M4 19v-2a4 4 0 0 1 4-4h0" />
+                  <circle cx="16" cy="7" r="3" />
+                  <path d="M20 19v-2a4 4 0 0 0-4-4h0" />
+                  <path d="M8 13c3 0 5 2 5 5v1" />
+                </svg>
+              </div>
+              <h3>Paarmassage <span class="tag">Auf Anfrage</span></h3>
+              <ul
+                class="about-list"
+                style="margin-top: 1rem; font-size: 0.92rem"
+              >
+                <li>
+                  <span class="check-icon" aria-hidden="true">✓</span>
+                  <span
+                    ><strong>Gleichzeitige Behandlung:</strong> Entspannt
+                    nebeneinander abschalten, ohne Wartezeit</span
+                  >
+                </li>
+                <li>
+                  <span class="check-icon" aria-hidden="true">✓</span>
+                  <span
+                    ><strong>Für jeden Anlass:</strong> Ideal als kleine Auszeit
+                    und als perfekte Geschenkidee</span
+                  >
+                </li>
+              </ul>
             </article>
           </div>
         </div>
       </section>
 
-      <!-- Preise & Gutscheine -->
-      <section id="preise" class="section">
+      <!-- 4. PREISE & GUTSCHEINE -->
+      <section id="preise" class="section content-section">
         <div class="container">
           <div class="section-header">
             <h2>Preise &amp; Gutscheine</h2>
+            <p>
+              Transparente Tarife – Teil-Rückvergütung durch ÖGK &amp; weitere
+              Kassen mit ärztlicher Verordnung möglich.
+            </p>
           </div>
 
           <div class="pricing-grid">
@@ -249,38 +419,77 @@
           </div>
         </div>
       </section>
+
+      <!-- 5. KONTAKT -->
+      <section id="kontakt" class="section content-section">
+        <div class="container">
+          <div class="section-header">
+            <h2>Kontakt &amp; Terminvereinbarung</h2>
+            <p>
+              Termine nach Vereinbarung – schreiben Sie mir gerne eine E-Mail,
+              eine WhatsApp-Nachricht oder rufen Sie mich an.
+            </p>
+          </div>
+
+          <div class="cards-grid">
+            <article class="card">
+              <h3>Direkter Kontakt</h3>
+              <ul class="about-list" style="margin-top: 1rem">
+                <li>
+                  <span class="check-icon" aria-hidden="true">✓</span>
+                  <span
+                    ><strong>Telefon &amp; WhatsApp:</strong><br /><a
+                      href="tel:+436801294965"
+                      >+43 (0) 680 129 4965</a
+                    ></span
+                  >
+                </li>
+                <li>
+                  <span class="check-icon" aria-hidden="true">✓</span>
+                  <span
+                    ><strong>E-Mail:</strong><br /><a
+                      href="mailto:carmen.massagen@gmx.at"
+                      >carmen.massagen@gmx.at</a
+                    ></span
+                  >
+                </li>
+              </ul>
+              <div style="margin-top: 1.5rem">
+                <a
+                  href="mailto:carmen.massagen@gmx.at?subject=Terminanfrage"
+                  class="btn btn-primary"
+                  >E-Mail schreiben</a
+                >
+              </div>
+            </article>
+
+            <article class="card">
+              <h3>Praxisadresse</h3>
+              <address
+                style="
+                  margin-top: 0.75rem;
+                  color: var(--color-text-muted);
+                  line-height: 1.8;
+                "
+              >
+                <strong>Carmen Knichtl</strong><br />
+                Gewerbliche &amp; Freiberufliche Heilmasseurin<br />
+                Achstraße 20<br />
+                A-6844 Altach, Vorarlberg
+              </address>
+            </article>
+          </div>
+        </div>
+      </section>
     </main>
 
-    <!-- Kontakt & Footer -->
-    <footer id="kontakt" class="site-footer">
-      <div class="container footer-grid">
-        <div>
-          <h3>Kontakt &amp; Terminvereinbarung</h3>
-          <p>Termine nach telefonischer Vereinbarung oder per E-Mail.</p>
-          <ul class="contact-list">
-            <li>
-              <strong>Telefon:</strong>
-              <a href="tel:+436801294965">+43 (0) 680 129 4965</a>
-            </li>
-            <li>
-              <strong>E-Mail:</strong>
-              <a href="mailto:carmen.massagen@gmx.at">carmen.massagen@gmx.at</a>
-            </li>
-          </ul>
-        </div>
-
-        <div>
-          <h3>Praxisadresse</h3>
-          <address>
-            Carmen Knichtl<br />
-            Achstraße 20<br />
-            A-6844 Altach
-          </address>
-        </div>
-      </div>
-
-      <div class="container footer-bottom">
-        <p>&copy; <span id="year"></span> Carmen Knichtl · Heilmasseurin</p>
+    <!-- Schlanker Footer -->
+    <footer class="site-footer">
+      <div class="container footer-bottom" style="padding-top: 0; border: none">
+        <p>
+          &copy; <span id="year"></span> Carmen Knichtl · Heilmasseurin in
+          Altach
+        </p>
         <nav aria-label="Rechtliches">
           <a href="impressum.html">Impressum</a>
           <a href="datenschutz.html">Datenschutz</a>
@@ -289,5 +498,20 @@
     </footer>
 
     <script src="js/main.js" defer></script>
+
+    <!-- Floating WhatsApp Button -->
+    <a
+      href="https://wa.me/436801294965"
+      class="whatsapp-float"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Termin via WhatsApp anfragen"
+    >
+      <svg viewBox="0 0 24 24">
+        <path
+          d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.878-.788-1.472-1.761-1.645-2.06-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.82 9.82 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"
+        />
+      </svg>
+    </a>
   </body>
 </html>

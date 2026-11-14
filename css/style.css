@@ -1,13 +1,12 @@
 :root {
-  --color-primary: #8c8d73;
-  --color-primary-dark: #6f705a;
-  --color-accent-green: #a4d233;
-  --color-accent-blue: #29abe2;
-  --color-bg-light: #f6f6f2;
+  --color-primary: #a2b089; /* Neues Salbei-Grün aus dem Logo-Hintergrund */
+  --color-primary-dark: #48503c; /* Dunkles Oliv der Spirallinien */
+  --color-accent-green: #6b7859; /* Ruhiges Naturgrün für Akzente */
+  --color-bg-light: #f6f7f3;
   --color-white: #ffffff;
-  --color-text: #2c2d24;
-  --color-text-muted: #5a5b4e;
-  --color-border: #dcdcd2;
+  --color-text: #2c3026;
+  --color-text-muted: #575e4c;
+  --color-border: #dce0d5;
 
   --font-sans:
     system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -90,18 +89,13 @@ body {
 
 /* Hero */
 .hero {
-  background-color: var(--color-primary);
-  background-image:
-    linear-gradient(
-      90deg,
-      rgba(140, 141, 115, 0.94) 0%,
-      rgba(140, 141, 115, 0.78) 60%,
-      rgba(140, 141, 115, 0.55) 100%
-    ),
-    url("../assets/img/raum2.webp");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+  background: radial-gradient(
+    circle at 50% 28%,
+    #a2b089 0%,
+    #a2b089 70%,
+    #8d9c74 88%,
+    #788662 100%
+  );
   color: var(--color-white);
   padding: 4.5rem 0 5.5rem;
 }
@@ -138,31 +132,6 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
-}
-
-.hero-badge {
-  border: 1px solid rgba(255, 255, 255, 0.45);
-  border-radius: 50%;
-  width: 230px;
-  height: 230px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 1.5rem;
-}
-
-.hero-badge span {
-  font-size: 1.2rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.hero-badge small {
-  margin-top: 0.4rem;
-  opacity: 0.85;
 }
 
 /* Buttons */
@@ -258,12 +227,12 @@ body {
   color: var(--color-text-muted);
 }
 
-/* Über mich */
+/* Über mich & Checklisten (Grüne Häkchen) */
 .about-grid {
   display: grid;
   grid-template-columns: 260px 1fr;
   gap: 2.5rem;
-  align-items: center;
+  align-items: start;
 }
 
 .image-placeholder {
@@ -275,6 +244,49 @@ body {
   align-items: center;
   justify-content: center;
   font-size: 0.95rem;
+}
+
+.about-text p {
+  margin-bottom: 1.15rem;
+}
+
+.about-text .lead-text {
+  font-size: 1.1rem;
+  color: var(--color-primary-dark);
+}
+
+.about-list-title {
+  font-size: 1.15rem;
+  margin: 2rem 0 1rem;
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+.about-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.about-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  margin-bottom: 0.85rem;
+  color: var(--color-text-muted);
+  line-height: 1.45;
+}
+
+.check-icon {
+  color: var(--color-primary-dark);
+  font-weight: 800;
+  font-size: 1.1rem;
+  line-height: 1.3;
+  flex-shrink: 0;
+}
+
+.about-list strong {
+  color: var(--color-text);
 }
 
 /* Behandlungen */
@@ -465,6 +477,55 @@ address {
   gap: 1.5rem;
 }
 
+/* Sichtbarkeits-Logik (SPA Tabs) */
+.content-section {
+  display: none;
+  animation: fadeIn 0.4s ease;
+}
+
+.content-section.is-active {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Schwebender WhatsApp-Button */
+.whatsapp-float {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background-color: #25d366;
+  color: white;
+  border-radius: 50%;
+  width: 58px;
+  height: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  transition: transform 0.2s ease;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+}
+
+.whatsapp-float svg {
+  width: 32px;
+  height: 32px;
+  fill: currentColor;
+}
+
 /* Responsive (Smartphones & Tablets) */
 @media (max-width: 768px) {
   .nav-toggle {
@@ -497,11 +558,6 @@ address {
     letter-spacing: 0.08em;
   }
 
-  .hero-badge {
-    width: 180px;
-    height: 180px;
-  }
-
   .voucher-banner {
     grid-template-columns: 1fr;
   }
@@ -520,4 +576,68 @@ address {
     text-align: center;
     padding: 1rem;
   }
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+.main-nav a.active {
+  color: var(--color-primary-dark);
+  border-bottom: 2px solid var(--color-primary);
+  padding-bottom: 2px;
+}
+
+.site-footer {
+  padding: 1.75rem 0;
+}
+
+/* Zentrierter Hero-Bereich für das PNG-Logo */
+.hero-centered {
+  text-align: center;
+  padding: 4rem 0 5rem;
+}
+
+.hero-container-centered {
+  max-width: 750px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-logo-wrapper {
+  margin-bottom: 1.75rem;
+  position: relative;
+  display: inline-block;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.hero-logo-img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  mix-blend-mode: initial;
+  opacity: 0.92;
+  -webkit-mask-image: radial-gradient(
+    circle at center,
+    black 65%,
+    transparent 98%
+  );
+  mask-image: radial-gradient(circle at center, black 75%, transparent 98%);
+}
+
+.hero-kicker-centered {
+  font-size: 1.05rem;
+  opacity: 0.95;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+  max-width: 650px;
 }
